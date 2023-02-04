@@ -1,8 +1,9 @@
 void main(List<String> args) {
-  // Use the where method to filter a List of integers and only keep values greater than 3.
+// Use the where method to filter a List of integers and only keep values greater than 3.
   List<int> numbers2 = [1, 2, 3, 4, 5];
-  List<int> filteredNumbers;
+  List<int> filteredNumbers = numbers2.where((element) => element > 3).toList();
   // output should be [4, 5]
+  print(filteredNumbers);
 
   // Use the where method to filter a List of strings and only keep values that start with the letter "A".
   List<String> names2 = [
@@ -13,8 +14,10 @@ void main(List<String> args) {
     'Mohamed',
     'Ali'
   ];
-  List<String> filteredNames;
+  List<String> filteredNames =
+      names2.where((element) => element[0] == 'A').toList();
   //output should be ['Ahmed', 'Ali']
+  print(filteredNames);
 
   // Use the where method to filter a List of strings and only keep values that start with the letter "A" and end with the letter "d".
   List<String> names3 = [
@@ -25,21 +28,30 @@ void main(List<String> args) {
     'Mohamed',
     'Ali'
   ];
-  List<String> filteredNames2;
+  List<String> filteredNames2 = names3
+      .where(
+          (element) => element[0] == 'A' && element[element.length - 1] == 'd')
+      .toList();
+  ;
   //output should be ['Ahmed']
+  print(filteredNames2);
 
   // DONT USE FOR LOOP  find the first number that is greater than 4 in the list
   List<int> numbers3 = [1, 2, 3, 5, 9, 10];
-  int firstNumberGreaterThan4;
+  List<int> get = numbers3.where((element) => element > 4).toList();
+  int firstNumberGreaterThan4 = get[0];
   // output should be 5
+  print(firstNumberGreaterThan4);
 
   // MORE ADVANCED
   // Use the where method to find all elements in a List of maps that have a value of "John" for the key "name"
   List<Map<String, String>> people = [
     {'name': 'John', 'age': '30'},
     {'name': 'Jane', 'age': '25'},
-    {'name': 'Jim', 'age': '35'}
+    {'name': 'Jim', 'age': '35'},
   ];
-  List<Map<String, String>> johns;
+  List<Map<String, String>> johns =
+      people.where((e) => e['name'] == 'John').toList();
   // output should be [{'name': 'John', 'age': '30'}]
+  print(johns);
 }
