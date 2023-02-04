@@ -63,10 +63,16 @@ void main(List<String> args) {
   Map<String, int> grades = {'Ahmed': 75, 'Youssef': 82, 'Sherif': 90};
   print(grades.entries.toList());
 
+  
   // convert map into Key- Value pairs in list without using for loop
-  List<MapEntry<String, int>> entries;
-  // I don't know how to do it and if i assign a map to the entries list is shows that "A value of type 'Map<String, int>' can't be assigned to a variable of type 'MapEntry<String, int>'"
-  // And if i looped using forEach is doesn't do any thing and i searched for a while and didn't find any thing 
+  
+  // From me i added some entries in the list to use is ^_^
+  List<MapEntry<String, int>> entries = [
+    MapEntry("aa", 12),
+    MapEntry("aa", 15),
+    MapEntry("aa", 12)
+  ];
+  print(entries.map((element) => {element.key: element.value}).toList());
 
   // convert this list into set
   List<int> numbers = [1, 2, 3, 4, 5, 1, 2, 3];
