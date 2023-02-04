@@ -38,8 +38,7 @@ void main(List<String> args) {
 
   // DONT USE FOR LOOP  find the first number that is greater than 4 in the list
   List<int> numbers3 = [1, 2, 3, 5, 9, 10];
-  List<int> get = numbers3.where((element) => element > 4).toList();
-  int firstNumberGreaterThan4 = get[0];
+  int firstNumberGreaterThan4 = numbers3.firstWhere((element) => element > 4);
   // output should be 5
   print(firstNumberGreaterThan4);
 
