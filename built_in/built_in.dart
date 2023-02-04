@@ -61,11 +61,7 @@ void main(List<String> args) {
   // convert map into Key- Value pairs in list without using for loop
 
   Map<String, int> grades = {'Ahmed': 75, 'Youssef': 82, 'Sherif': 90};
-  List Data = [];
-  grades.entries
-      .map((element) => Data.add({element.key: element.value}))
-      .toList();
-  print(Data);
+  print(grades.entries.toList());
 
   // convert map into Key- Value pairs in list without using for loop
   List<MapEntry<String, int>> entries;
