@@ -1,4 +1,3 @@
-
 void main(List<String> args) {
   //! easy
   // print the values of the list using for each method in list
@@ -42,6 +41,8 @@ void main(List<String> args) {
   print(doubledMap);
 
   // Write a function that takes a List of Maps and returns a Map with the sum of values for each key
+
+  // I used a var a to handle the null safety (:
   List<Map<String, int>> listOfMaps = [
     {"a": 1, "b": 2, "c": 3},
     {"a": 2, "b": 4, "c": 6},
@@ -65,6 +66,8 @@ void main(List<String> args) {
   print(sumOfValues);
 
   // Sort a Map by its keys and values
+
+  // I used a list to sort the key inside after assign the entries of the map in is and re assign the sorted list to the map ^_^
   Map<String, int> alphabets = {'b': 2, 'a': 1, 'c': 3};
   List s = alphabets.entries.toList();
   Map<String, int> sortedAlphabets = {};
